@@ -1,18 +1,8 @@
-<script context="module">
-    export const prerender = true;
-</script>
-
 <script>
-
-    import { readable } from 'svelte/store';
 
     import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
     import {   Instance, InstancedMesh, useFrame } from '@threlte/core'
-    const movgeometry = new BoxBufferGeometry(40, 40, 40)
-    const movmaterial = new MeshBasicMaterial( {color: 0x00ff00} )
-
-
 
     import * as THREE from 'three'
     import { Text, GLTF } from '@threlte/extras'
@@ -34,9 +24,6 @@
     import {
         AmbientLight,
         DirectionalLight,
-        Group,
-            Object3DInstance,
-        HemisphereLight,
         Mesh,
         PerspectiveCamera,
         useThrelte
@@ -44,10 +31,6 @@
     import { spring,
         tweened,
     } from 'svelte/motion'
-    import Navbar from './Navbar/Navbar.svelte';
-    import About from './Bodyparts/About.svelte';
-    import Ground from "./Rapier/Ground.svelte";
-    import Emitter from "./Rapier/Emitter.svelte";
 
     const scale = spring(1)
     const scale1 = spring(1)
@@ -119,9 +102,6 @@
 <DirectionalLight shadow position={{ x: 3, y: 10, z: 10 }} />
 <DirectionalLight position={{ x: -3, y: 10, z: -10 }} intensity={.2} />
 <AmbientLight intensity={.2} />
-
-<Ground/>
-
 
 <Text
         text="Hello, I'm Fernando."
