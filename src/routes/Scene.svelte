@@ -4,8 +4,8 @@
 
     import {   Instance, InstancedMesh, useFrame } from '@threlte/core'
 
-    import Github from '/github.gltf'
     import Gradpic from '/gradpic.jpg'
+    import Github from '/github.gltf'
     import Instagram from '/instagramlogo.gltf'
     import LinkedIn from '/linkedin.gltf'
     import Resume from '/newresu.pdf'
