@@ -5,6 +5,9 @@ import adapter from '@sveltejs/adapter-netlify';
 const config = {
 	preprocess: preprocess(),
 	kit: {
+		files:{
+			assets: 'static'
+		},
 		adapter: adapter()
 	}
 };

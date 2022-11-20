@@ -4,8 +4,7 @@
 
     import {   Instance, InstancedMesh, useFrame } from '@threlte/core'
 
-    import Gradpic from '/src/Assets/gradpic.jpg'
-    import Resume from '/src/Assets/newresu.pdf'
+
 
     import * as THREE from 'three'
     import { Text, GLTF } from '@threlte/extras'
@@ -68,7 +67,7 @@
         console.log($camera.position)
     }
 
-    const gradpic = new THREE.TextureLoader().load(Gradpic);
+    const gradpic = new THREE.TextureLoader().load('/Assets/gradpic.jpg');
     const saturnTexture = new THREE.TextureLoader().load('https://tse4.mm.bing.net/th?id=OIP.GFEc1rnPZX09j_rlhSaszQHaDt&pid=Api');
 
     let scaleSat = spring(1);
@@ -166,7 +165,7 @@
       interactive
       on:pointerenter={() => ($scale2 = 1.3)}
       on:pointerleave={() => ($scale2 = 1)}
-      on:click={() => window.location = Resume}
+      on:click={() => window.location = '/Assets/newresu.pdf'}
       text="RESUME"
       fontSize= {15}
       position={{x:-80, y:-5, z:-150}}
@@ -306,7 +305,7 @@ part of a team that shares my interest and create something amazing."
 
 <GLTF
         interactive
-        url='/src/Assets/github.gltf'
+        url='/Assets/github.gltf'
         on:pointerenter={() => ($scaleGit = 50)}
         on:pointerleave={() => ($scaleGit = 40)}
         on:click={() => window.location = "https://github.com/fpimentel-threejs"}
@@ -316,7 +315,7 @@ part of a team that shares my interest and create something amazing."
 
 <GLTF
         interactive
-        url='/src/Assets/linkedin.gltf'
+        url='/Assets/linkedin.gltf'
         on:pointerenter={() => ($scaleLI = 2)}
         on:pointerleave={() => ($scaleLI = 1.5)}
         on:click={() => window.location = "https://www.linkedin.com/in/fernando-pimentel-935143230/"}
@@ -326,7 +325,7 @@ part of a team that shares my interest and create something amazing."
 
 <GLTF
         interactive
-        url='/src/Assets/instagramlogo.gltf'
+        url='/Assets/instagramlogo.gltf'
         on:pointerenter={() => ($scaleInsta = 18)}
         on:pointerleave={() => ($scaleInsta = 15)}
         on:click={() => window.location = "https://www.instagram.com/rxnando/"}
@@ -334,20 +333,20 @@ part of a team that shares my interest and create something amazing."
         position={{x:770, y:-140, z:-720}}
 />
 <GLTF
-        url='/src/Assets/rose.gltf'
+        url='/Assets/rose.gltf'
         position={{x: 5 * Math.sin(dn / 3000) , y: 5*Math.sin(dn / 3000)-10, z:10*Math.sin(dn / 1500)-200}}
         scale={5}
         rotation = {{x:.5, z: .5}}
 />
 
 <GLTF
-        url='/src/Assets/straw.gltf'
+        url='/Assets/straw.gltf'
         position={{x: -650,y: -15,z: -720}}
         scale={15}
         rotation = {{x:.5,y: .3, z: .97}}
 />
 <GLTF
-        url= '/src/Assets/tomatoball.gltf'
+        url= '/Assets/tomatoball.gltf'
         position={{x: -590, y: 40, z: -720}}
         scale={400}
         rotation = {{x:.5, z: -.5}}
@@ -355,7 +354,7 @@ part of a team that shares my interest and create something amazing."
 
 <GLTF
         interactive
-        url='/src/Assets/tompa.gltf'
+        url='/Assets/tompa.gltf'
         on:pointerenter={() => ($scaleTomp = 10)}
         on:pointerleave={() => ($scaleTomp = 8)}
         on:pointerenter={() => (textVisTompa = true)}
