@@ -12,17 +12,11 @@
     import { Debug } from '@threlte/rapier'
 
     import {
-            CircleBufferGeometry,
-            MeshStandardMaterial,
-            BoxBufferGeometry,
-            DoubleSide,
-            Scene,
             SphereBufferGeometry,
             MeshBasicMaterial,
             PlaneBufferGeometry,
-            MathUtils, TorusBufferGeometry
+            TorusBufferGeometry
     } from 'three'
-    import { DEG2RAD } from 'three/src/math/MathUtils'
     import {
         AmbientLight,
         DirectionalLight,
@@ -31,7 +25,6 @@
         useThrelte
     } from '@threlte/core'
     import { spring,
-        tweened,
     } from 'svelte/motion'
 
     const scale = spring(1)
@@ -71,25 +64,6 @@
     const saturnTexture = new THREE.TextureLoader().load('https://tse4.mm.bing.net/th?id=OIP.GFEc1rnPZX09j_rlhSaszQHaDt&pid=Api');
 
     let scaleSat = spring(1);
-
-    const particlesGeometry = new THREE.BufferGeometry;
-    const particlesCnt = 100;
-
-    const posArray = new Float32Array(particlesCnt * 3);
-    // xyz, xyz, xyz, xyz
-
-    for(let i = 0; i < particlesCnt*3; i++){
-            //posArray[i] = Math.random()
-            //posArray[i] = Math.random() - 0.5
-            posArray[i] = (Math.random() - .5)*(Math.random() * 800)
-    }
-
-    particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3))
-
-    const particlesMaterial = new THREE.PointsMaterial({
-            size: 0.025,
-            color: 0xffdddd
-    })
 
     let dn = Date.now()
     useFrame(() => (dn = Date.now()))
@@ -157,7 +131,7 @@
       }
       text="MY WORK"
       fontSize= {15}
-      position={{x:30, y:50, z:-150}}
+      position={{x:20, y:50, z:-150}}
       outlineBlur={1}
       color = {0x58F7CD}
 />
@@ -168,7 +142,7 @@
       on:click={() => window.location = '/Assets/newresu.pdf'}
       text="RESUME"
       fontSize= {15}
-      position={{x:-80, y:-5, z:-150}}
+      position={{x:-80, y:-15, z:-150}}
       outlineBlur={1}
       color = {0x58F7CD}
 />
@@ -190,7 +164,7 @@
       }
       text="CONTACT"
       fontSize= {15}
-      position={{x:30, y:-5, z:-150}}
+      position={{x:20, y:-15, z:-150}}
       outlineBlur={1}
         color = {0x58F7CD}
 />
