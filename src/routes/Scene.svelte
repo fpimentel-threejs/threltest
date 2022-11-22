@@ -375,7 +375,7 @@ I have created with Three.js(WIP)"
         on:pointerenter={() => (textVisSol = true)}
         on:pointerleave={() => (textVisSol = false)}
         scale = {$scaleSat}
-        on:click={() => window.location = "https://www.youtube.com/watch?v=jkDCX9NKc5U"}
+        on:click={() => window.location = "https://polite-elf-0edf20.netlify.app/"}
         geometry={new SphereBufferGeometry(15, 32, 16)}
         material={new MeshBasicMaterial({map: saturnTexture})}
 />
@@ -389,7 +389,7 @@ I have created with Three.js(WIP)"
         on:pointerleave={() => (textVisSol = false)}
         scale = {$scaleSat}
         rotation = {{x: 2, y: .2}}
-        on:click={() => window.location = "https://www.youtube.com/watch?v=jkDCX9NKc5U"}
+        on:click={() => window.location = "https://polite-elf-0edf20.netlify.app/"}
         geometry={new TorusBufferGeometry(20, 3, 2, 62)}
         material={new MeshBasicMaterial({map: saturnTexture, transparent: true, opacity: 0.6})}
 />
