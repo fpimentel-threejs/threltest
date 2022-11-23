@@ -358,8 +358,9 @@ partner for my senior design project"
 />
 
 <Text
-        text = "A model of the solar system
-I have created with Three.js(WIP)"
+        text = "A (soon to be scale) model of the
+solar system I have created
+with Three.js(WIP)"
         fontSize = {8}
         position = {{x: 670, y: 100, z: -750}}
         outlineBlur={1}
