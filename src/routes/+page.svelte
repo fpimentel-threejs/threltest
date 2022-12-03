@@ -15,8 +15,8 @@
   }
 
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    let widthScreen = 1250;
-    let heightScreen = 750;
+    widthScreen = 1250;
+    heightScreen = 750;
   }
 
 </script>
