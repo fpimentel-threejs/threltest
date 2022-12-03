@@ -10,8 +10,13 @@
   let heightScreen = 750;
 
   if(typeof window !== 'undefined') {
-    widthScreen = window.innerWidth;
-    heightScreen = window.innerHeight;
+    widthScreen = window.innerWidth - 10;
+    heightScreen = window.innerHeight - 20;
+  }
+
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    let widthScreen = 1250;
+    let heightScreen = 750;
   }
 
 </script>
