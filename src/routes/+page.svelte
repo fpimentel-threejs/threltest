@@ -6,6 +6,14 @@
   import { World } from '@threlte/rapier'
   import Scene from './Scene.svelte'
 
+  let widthScreen = 1250;
+  let heightScreen = 750;
+
+  if(typeof window !== 'undefined') {
+    widthScreen = window.innerWidth;
+    heightScreen = window.innerHeight;
+  }
+
 </script>
 
 
@@ -13,7 +21,7 @@
 
 
 <div>
-  <Canvas size={{width:1250, height: 700}}>
+  <Canvas size={{width: widthScreen, height: heightScreen}}>
     <World>
       <Scene/>
     </World>
