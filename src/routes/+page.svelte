@@ -21,7 +21,7 @@
 
 
 <div>
-  <Canvas size={{width: widthScreen, height: heightScreen}}>
+  <Canvas size={{width: 1250, height: 600}}>
     <World>
       <Scene/>
     </World>
@@ -34,6 +34,5 @@
       height: 100%;
       width: 100%;
   }
-
 
 </style>
