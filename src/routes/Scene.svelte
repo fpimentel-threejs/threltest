@@ -72,6 +72,8 @@
     let textVisTompa = false;
     let textVisSol = false;
 
+    let wiggleFactor = 2 * Math.sin(dn / 1000);
+
 </script>
 
 <PerspectiveCamera
@@ -274,7 +276,7 @@ part of a team that shares my interest and create something amazing."
 />
 
 <Mesh
-        position={{x: -720,y: 40,z: -750}}
+        position={{x: -720 + 2 * Math.sin(dn / 1000),y: 40 + 2 * Math.sin(dn / 1000),z: -750 + 2 * Math.sin(dn / 1000)}}
         geometry={new PlaneBufferGeometry(35, 50)}
         material={new MeshBasicMaterial({map: gradpic})}
 />
@@ -286,7 +288,7 @@ part of a team that shares my interest and create something amazing."
         on:pointerleave={() => ($scaleGit = 40)}
         on:click={() => window.location = "https://github.com/fpimentel-threejs"}
         scale = {$scaleGit}
-        position={{x:660, y:-140, z:-720}}
+        position={{x:660 + 2 * Math.sin(dn / 1000), y:-140 + 2 * Math.sin(dn / 1000), z:-720 + 2 * Math.sin(dn / 1000)}}
 />
 
 <GLTF
@@ -296,7 +298,7 @@ part of a team that shares my interest and create something amazing."
         on:pointerleave={() => ($scaleLI = 1.5)}
         on:click={() => window.location = "https://www.linkedin.com/in/fernando-pimentel-935143230/"}
         scale = {$scaleLI}
-        position={{x:720, y:-140, z:-720}}
+        position={{x:720 + 2 * Math.sin(dn / 1000), y:-140 + 2 * Math.sin(dn / 1000), z:-720 + 2 * Math.sin(dn / 1000)}}
 />
 
 <GLTF
@@ -306,7 +308,7 @@ part of a team that shares my interest and create something amazing."
         on:pointerleave={() => ($scaleInsta = 15)}
         on:click={() => window.location = "https://www.instagram.com/rxnando/"}
         scale = {$scaleInsta}
-        position={{x:770, y:-140, z:-720}}
+        position={{x:770 + 2 * Math.sin(dn / 1000), y:-140 + 2 * Math.sin(dn / 1000), z:-720 + 2 * Math.sin(dn / 1000)}}
 />
 <GLTF
         url='/Assets/rose.gltf'
@@ -324,7 +326,7 @@ part of a team that shares my interest and create something amazing."
         on:pointerleave={() => (textVisTompa = false)}
         scale = {$scaleTomp}
         on:click={() => window.location = "https://www.youtube.com/watch?v=9WIJQ6QJ_xQ"}
-        position ={{x:680, y:120, z:-720}}
+        position ={{x:680 + 2 * Math.sin(dn / 1000), y:120 + 2 * Math.sin(dn / 1000), z:-720 + 2 * Math.sin(dn / 1000)}}
         rotation = {{y: 2}}
 />
 <Text
@@ -359,7 +361,7 @@ with Three.js(WIP)"
 
 <Mesh
         interactive
-        position={{x: 790,y: 120,z: -750}}
+        position={{x: 790 + 2 * Math.sin(dn / 1000),y: 120 + 2 * Math.sin(dn / 1000),z: -750 + 2 * Math.sin(dn / 1000)}}
         on:pointerenter={() => ($scaleSat = 1.3)}
         on:pointerleave={() => ($scaleSat = 1)}
         on:pointerenter={() => (textVisSol = true)}
@@ -372,7 +374,7 @@ with Three.js(WIP)"
 
 <Mesh
         interactive
-        position={{x: 790,y: 120,z: -750}}
+        position={{x: 790 + 2 * Math.sin(dn / 1000),y: 120 + 2 * Math.sin(dn / 1000),z: -750 + 2 * Math.sin(dn / 1000)}}
         on:pointerenter={() => ($scaleSat = 1.3)}
         on:pointerleave={() => ($scaleSat = 1)}
         on:pointerenter={() => (textVisSol = true)}
