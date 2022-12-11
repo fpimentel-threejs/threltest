@@ -26,6 +26,8 @@
     } from '@threlte/core'
     import { spring,
     } from 'svelte/motion'
+    import Emitter from "./Emitter.svelte";
+    import Emitter2 from "./Emitter2.svelte";
 
     const scale = spring(1)
     const scale1 = spring(1)
@@ -314,19 +316,6 @@ part of a team that shares my interest and create something amazing."
 />
 
 <GLTF
-        url='/Assets/straw.gltf'
-        position={{x: -650,y: -15,z: -720}}
-        scale={15}
-        rotation = {{x:.5,y: .3, z: .97}}
-/>
-<GLTF
-        url= '/Assets/tomatoball.gltf'
-        position={{x: -590, y: 40, z: -720}}
-        scale={400}
-        rotation = {{x:.5, z: -.5}}
-/>
-
-<GLTF
         interactive
         url='/Assets/tompa.gltf'
         on:pointerenter={() => ($scaleTomp = 10)}
@@ -401,3 +390,6 @@ with Three.js(WIP)"
         geometry={new SphereBufferGeometry(32, 32, 16)}
         material={new MeshBasicMaterial({ wireframe: true })}
 />
+
+<Emitter/>
+<Emitter2/>
