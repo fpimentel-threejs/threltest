@@ -1,7 +1,7 @@
 <script>
     import {Mesh, useFrame} from "@threlte/core";
     import {MeshBasicMaterial, SphereBufferGeometry, TorusBufferGeometry} from "three";
-    import {GLTF, Text} from "@threlte/extras";
+    import {Float, GLTF, Text} from "@threlte/extras";
     import {spring} from "svelte/motion";
     import * as THREE from "three";
 
@@ -10,19 +10,22 @@
 
     const scaleTomp = spring(8)
     let scaleSat = spring(1);
+    let scaleBlend = spring(40);
 
     const saturnTexture = new THREE.TextureLoader().load('https://tse4.mm.bing.net/th?id=OIP.GFEc1rnPZX09j_rlhSaszQHaDt&pid=Api');
 
     let textVisTompa = false;
     let textVisSol = false;
+    let textVisBlend = false;
 </script>
 
 <Text
         text = "Click on one of the models to view a demo
         of a project I've worked on"
         fontSize = {8}
+        font="/Assets/Louis George Cafe Light.ttf"
         position = {{x: 670, y: 165, z: -800}}
-        outlineBlur={1}
+        outlineBlur={.5}
         color = {0x58F7CD}
 />
 
@@ -58,10 +61,34 @@
 solar system I have created
 with Three.js(WIP)"
         fontSize = {8}
+        font="/Assets/Louis George Cafe Light.ttf"
         position = {{x: 670, y: 100, z: -750}}
-        outlineBlur={1}
+        outlineBlur={.5}
         color = {0x58F7CD}
         visible = {textVisSol}
+/>
+
+<!--<GLTF
+        interactive
+        url='/Assets/blenderlogo.gltf'
+        on:pointerenter={() => ($scaleBlend = 52)}
+        on:pointerleave={() => ($scaleBlend = 40)}
+        on:pointerenter={() => (textVisBlend = true)}
+        on:pointerleave={() => (textVisBlend = false)}
+        scale = {$scaleBlend}
+        on:click={() => window.location = "/BlenderPort"}
+        position ={{x:710 + 2 * Math.sin(dn / 1000), y:100 + 2 * Math.sin(dn / 1000), z:-720 + 2 * Math.sin(dn / 1000)}}
+/>-->
+
+<Text
+        text = "A tower defense VR game I created with a
+partner for my senior design project"
+        fontSize = {8}
+        font="/Assets/Louis George Cafe Light.ttf"
+        position = {{x: 670, y: 100, z: -750}}
+        outlineBlur={.5}
+        color = {0x58F7CD}
+        visible = {textVisTompa}
 />
 
 <GLTF
@@ -78,11 +105,11 @@ with Three.js(WIP)"
 />
 
 <Text
-        text = "A tower defense VR game I created with a
-partner for my senior design project"
+        text = "Collection of my creations on Blender"
         fontSize = {8}
+        font="/Assets/Louis George Cafe Light.ttf"
         position = {{x: 670, y: 100, z: -750}}
-        outlineBlur={1}
+        outlineBlur={.5}
         color = {0x58F7CD}
-        visible = {textVisTompa}
+        visible = {textVisBlend}
 />

@@ -13,6 +13,7 @@
 <Text
         text="Contact Me"
         fontSize= {15}
+        font="/Assets/Louis George Cafe Light.ttf"
         position={{x:690, y:-80, z:-750}}
         outlineBlur={1}
         color = {0x58F7CD}

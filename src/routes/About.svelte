@@ -25,6 +25,7 @@
 <Text
         text = "About Me"
         fontSize = {15}
+        font="/Assets/Louis George Cafe Light.ttf"
         position = {{x: -690, y: 80, z: -750}}
         outlineBlur={1}
         color = {0x3affa2}
@@ -34,6 +35,7 @@
         text = "I am a 3D software developer looking
 to apply my skills."
         fontSize = {8}
+        font="/Assets/Louis George Cafe.ttf"
         position = {{x: -700, y: 60, z: -800}}
         outlineBlur={.5}
         color = {0x3affa2}
@@ -46,6 +48,7 @@ I dedicate most of my time to creating 3D worlds within the browser
 and learning all the skills that this entails. My hope is to become
 part of a team that shares my interest and create something amazing."
         fontSize = {5}
+        font="/Assets/Louis George Cafe.ttf"
         position = {{x: -700, y: 30, z: -800}}
         outlineBlur={.3}
         color = {0x3affa2}
